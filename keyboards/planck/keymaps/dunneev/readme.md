@@ -1,4 +1,4 @@
-# The Default Planck Layout
+# Evan's Planck Layout
 
 workhorse.json is the keymap created in the qmk online configurator.
 
