@@ -1,2 +1,3 @@
-# The Default Planck Layout
+# Evan's Planck Layout
 
+If in doubt, use the latest rev.
