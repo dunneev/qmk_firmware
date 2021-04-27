@@ -17,6 +17,8 @@
 #include QMK_KEYBOARD_H
 #include "muse.h"
 
+
+// Set dvorak first, so it's the default
 enum planck_layers { _QWERTY, _COLEMAK, _DVORAK, _LOWER, _RAISE, _PLOVER, _ADJUST };
 
 enum planck_keycodes { QWERTY = SAFE_RANGE, COLEMAK, DVORAK, PLOVER, BACKLIT, EXT_PLV };
@@ -85,18 +87,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      */
     [_COLEMAK] = LAYOUT_planck_grid(KC_TRNS,KC_Q,KC_W,KC_F,KC_P,KC_G,KC_J,KC_L,KC_U,KC_Y,KC_SCLN,KC_TRNS,KC_TRNS,KC_TRNS,KC_R,KC_S,KC_T,KC_D,KC_H,KC_N,KC_E,KC_I,KC_O,KC_QUOT,KC_TRNS,KC_Z,KC_X,KC_C,KC_V,KC_B,KC_K,KC_M,KC_COMM,KC_DOT,KC_SLSH,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS),
 
-    /* Dvorak
-     * ,-----------------------------------------------------------------------------------.
-     * | Tab  |     |   ,  |   .  |   P  |   Y  |   F  |   G  |   C  |   R  |   L  | Bksp |
-     * |------+------+------+------+------+------+------+------+------+------+------+------|
-     * | Esc  |   A  |   O  |   E  |   U  |   I  |   D  |   H  |   T  |   N  |   S  |  /   |        
-     * |------+------+------+------+------+------+------+------+------+------+------+------|
-     * | Shift|   ;  |   Q  |   J  |   K  |   X  |   B  |   M  |   W  |   V  |   Z  |Enter |
-     * |------+------+------+------+------+------+------+------+------+------+------+------|
-     * | Brite| Ctrl | Alt  | GUI  |Lower |    Space    |Raise | Left | Down |  Up  |Right |
-     * `-----------------------------------------------------------------------------------'
-     */
-    [_DVORAK] = LAYOUT_planck_grid(KC_TRNS,KC_QUOT,KC_COMM,KC_DOT,KC_P,KC_Y,KC_F,KC_G,KC_C,KC_R,KC_L,KC_TRNS,KC_TRNS,KC_A,KC_O,KC_E,KC_U,KC_I,KC_D,KC_H,KC_T,KC_N,KC_S,KC_SLSH,KC_TRNS,KC_SCLN,KC_Q,KC_J,KC_K,KC_X,KC_B,KC_M,KC_W,KC_V,KC_Z,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS),
+    [_DVORAK] = LAYOUT_planck_grid(KC_TRNS, KC_QUOT,KC_COMM,KC_DOT,KC_P,KC_Y,KC_F,KC_G,KC_C,KC_R,KC_L,KC_TRNS,KC_TRNS,KC_A,KC_O,KC_E,KC_U,KC_I,KC_D,KC_H,KC_T,KC_N,KC_S,KC_MINS,KC_TRNS,KC_SCLN,KC_Q,KC_J,KC_K,KC_X,KC_B,KC_M,KC_W,KC_V,KC_Z,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_SLSH,KC_TRNS,KC_TRNS,KC_TRNS),
 
     /* Lower
      * ,-----------------------------------------------------------------------------------.
@@ -572,18 +563,18 @@ void esc_reset(qk_tap_dance_state_t *state, void *user_data) {
 
         // ESC
         case SINGLE_TAP: 
-            register_code(KC_ESC);
+            unregister_code(KC_ESC);
             break;
 
         // ~
         case DOUBLE_TAP: 
-            register_code(KC_GRV);
+            unregister_code(KC_GRV);
             break;
 
         // `
         case TRIPLE_TAP: 
-            register_code(KC_LSFT); 
-            register_code(KC_GRV);
+            unregister_code(KC_LSFT); 
+            unregister_code(KC_GRV);
 
             break;
     }
@@ -596,7 +587,7 @@ qk_tap_dance_action_t tap_dance_actions[] = {
     [LEFT_SHIFT_BRACKET_DANCE] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, left_shift_finished, left_shift_reset),
     [RIGHT_SHIFT_BRACKET_DANCE] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, right_shift_finished, right_shift_reset),
 
-    // Tap numpad equals once for '=', twice for enter'    
+    // Tap numpad equals once for '=', twice for enter
     [EQUALS_SIGN_ENTER_DANCE] = ACTION_TAP_DANCE_DOUBLE(KC_EQUAL, KC_KP_EQUAL),
     [ESCAPE_BACKTICK_TILDE_DANCE] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, esc_finished, esc_reset),
 
