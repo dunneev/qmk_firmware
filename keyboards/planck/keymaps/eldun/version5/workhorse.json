@@ -19,7 +19,7 @@
             "KC_O",
             "KC_P",
             "KC_BSPC",
-            "KC_TAB",
+            "LT(4,KC_TAB)",
             "KC_A",
             "KC_S",
             "KC_D",
