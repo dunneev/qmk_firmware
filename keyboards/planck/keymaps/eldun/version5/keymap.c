@@ -18,7 +18,6 @@
 #include "muse.h"
 
 
-// Set dvorak first, so it's the default
 enum planck_layers { _QWERTY, _COLEMAK, _DVORAK, _LOWER, _RAISE, _PLOVER, _ADJUST };
 
 enum planck_keycodes { QWERTY = SAFE_RANGE, COLEMAK, DVORAK, PLOVER, BACKLIT, EXT_PLV };
