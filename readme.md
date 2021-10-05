@@ -37,4 +37,4 @@ QMK is developed and maintained by Jack Humbert of OLKB with contributions from 
 [qmk.fm](https://qmk.fm) is the official website of QMK, where you can find links to this page, the documentation, and the keyboards supported by QMK.
 
 ## Evan's planck layout files
-[Here](https://github.com/dunneev/qmk_firmware/tree/master/keyboards/planck/keymaps/dunneev)
+[Here](https://github.com/dunneev/qmk_firmware/tree/master/keyboards/planck/keymaps/eldun)
