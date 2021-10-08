@@ -71,7 +71,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * | Brite| Ctrl | Alt  | GUI  |Lower |    Space    |Raise | Left | Down |  Up  |Right |
      * `-----------------------------------------------------------------------------------'
      */
-    [_QWERTY] = LAYOUT_planck_grid(TD(ESCAPE_BACKTICK_TILDE_DANCE),KC_Q,KC_W,KC_E,KC_R,KC_T,KC_Y,KC_U,KC_I,KC_O,KC_P,KC_BSPC,KC_TAB,KC_A,KC_S,KC_D,KC_F,KC_G,KC_H,KC_J,KC_K,KC_L,KC_SCLN,KC_QUOT,TD(LEFT_SHIFT_BRACKET_DANCE),KC_Z,KC_X,KC_C,KC_V,KC_B,KC_N,KC_M,KC_COMM,KC_DOT,KC_SLSH,TD(RIGHT_SHIFT_BRACKET_DANCE),KC_LCTL,KC_LGUI,KC_CAPS,KC_LALT,LOWER,KC_SPC,KC_SPC,RAISE,KC_UNDS,KC_BSLS,KC_DEL,RCTL_T(KC_ENT)),
+    [_QWERTY] = LAYOUT_planck_grid(TD(ESCAPE_BACKTICK_TILDE_DANCE),KC_Q,KC_W,KC_E,KC_R,KC_T,KC_Y,KC_U,KC_I,KC_O,KC_P,KC_BSPC,LT(4,KC_TAB),KC_A,KC_S,KC_D,KC_F,KC_G,KC_H,KC_J,KC_K,KC_L,KC_SCLN,KC_QUOT,TD(LEFT_SHIFT_BRACKET_DANCE),KC_Z,KC_X,KC_C,KC_V,KC_B,KC_N,KC_M,KC_COMM,KC_DOT,KC_SLSH,TD(RIGHT_SHIFT_BRACKET_DANCE),KC_LCTL,KC_LGUI,KC_CAPS,KC_LALT,LOWER,KC_SPC,KC_SPC,RAISE,KC_UNDS,KC_BSLS,KC_DEL,RCTL_T(KC_ENT)),
 
     /* Colemak
      * ,-----------------------------------------------------------------------------------.
