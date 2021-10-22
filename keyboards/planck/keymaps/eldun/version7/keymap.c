@@ -112,7 +112,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |      |      |      |      |      |             |      | Next | Vol- | Vol+ | Play |
      * `-----------------------------------------------------------------------------------'
      */
-    [_RAISE] = LAYOUT_planck_grid(KC_TRNS,KC_EXLM,KC_PIPE,KC_AMPR,KC_EQUAL,KC_HASH,KC_AMPR,KC_PMNS,KC_PPLS,KC_PAST,KC_DEL,KC_BSPC,KC_TAB,KC_LCBR,KC_LPRN,KC_RPRN,KC_RCBR,KC_DLR,KC_LEFT,KC_DOWN,KC_UP,KC_RGHT,KC_SCLN,RCS(KC_Z),KC_LSFT,KC_LBRC,KC_LT,KC_GT,KC_RBRC,KC_PDOT,KC_HOME,KC_PGDN,KC_PGUP,KC_END,KC_QUES,KC_RSFT,KC_LCTL,LCTL(KC_Z),LCTL(KC_X),LCTL(KC_C),KC_TRNS,KC_SPC,KC_SPC,KC_TRNS,KC_UNDS,KC_BSLS,LCTL(KC_V),KC_SFTENT),
+    [_RAISE] = LAYOUT_planck_grid(KC_TRNS,KC_EXLM,KC_AMPR,KC_PIPE,KC_EQUAL,KC_HASH,KC_AMPR,KC_PMNS,KC_PPLS,KC_PAST,KC_DEL,KC_BSPC,KC_TAB,KC_LCBR,KC_LPRN,KC_RPRN,KC_RCBR,KC_DLR,KC_LEFT,KC_DOWN,KC_UP,KC_RGHT,KC_SCLN,RCS(KC_Z),KC_LSFT,KC_LBRC,KC_LT,KC_GT,KC_RBRC,KC_PDOT,KC_HOME,KC_PGDN,KC_PGUP,KC_END,KC_QUES,KC_RSFT,KC_LCTL,LCTL(KC_Z),LCTL(KC_X),LCTL(KC_C),KC_TRNS,KC_SPC,KC_SPC,KC_TRNS,KC_UNDS,KC_BSLS,LCTL(KC_V),KC_SFTENT),
 
     /* Plover layer (http://opensteno.org)
      * ,-----------------------------------------------------------------------------------.
